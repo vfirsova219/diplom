@@ -1,13 +1,10 @@
-# two player chess in python with Pygame!
-# part one, set up variables images and game loop
-
 import pygame
 
 pygame.init()
 WIDTH = 1000
 HEIGHT = 900
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
-pygame.display.set_caption('Two-Player Pygame Chess!')
+pygame.display.set_caption('Фирсова Владислава 219')
 font = pygame.font.Font('freesansbold.ttf', 20)
 medium_font = pygame.font.Font('freesansbold.ttf', 40)
 big_font = pygame.font.Font('freesansbold.ttf', 50)
@@ -96,7 +93,7 @@ def draw_board():
         for i in range(9):
             pygame.draw.line(screen, 'black', (0, 100 * i), (800, 100 * i), 2)
             pygame.draw.line(screen, 'black', (100 * i, 0), (100 * i, 800), 2)
-        screen.blit(medium_font.render('FORFEIT', True, 'black'), (810, 830))
+        screen.blit(medium_font.render('Конец', True, 'black'), (810, 830))
 
 
 # draw pieces onto board
@@ -348,8 +345,8 @@ def draw_check():
 
 def draw_game_over():
     pygame.draw.rect(screen, 'black', [200, 200, 400, 70])
-    screen.blit(font.render(f'{winner} won the game!', True, 'white'), (210, 210))
-    screen.blit(font.render(f'Press ENTER to Restart!', True, 'white'), (210, 240))
+    screen.blit(font.render(f'{winner} выиграл партию!', True, 'white'), (210, 210))
+    screen.blit(font.render(f'Нажмите Enter, чтобы начать сначала', True, 'white'), (210, 240))
 
 
 # main game loop
