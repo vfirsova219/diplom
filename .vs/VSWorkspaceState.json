@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\game_pack"
   ],
-  "SelectedNode": "\\main.py",
+  "SelectedNode": "\\allprogress.py",
   "PreviewInSolutionExplorer": false
 }
